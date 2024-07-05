@@ -1,4 +1,5 @@
 <template>
+    <!-- card page -->
     <div class="card">
         <div class="card-header">
             <slot name="cardHeader"></slot>
