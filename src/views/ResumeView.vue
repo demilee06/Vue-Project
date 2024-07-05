@@ -215,4 +215,17 @@ export default {
 }
 </script>
 <style scoped>
+@media only screen and (max-width: 600px){
+
+}
+@media only screen and (max-width: 480px){
+  /* .container{ */
+    /* display:flex;
+    justify-content: center; */
+    /* margin:auto; */
+    /* position: relative;
+    left:0;
+    right:0; */
+  /* } */
+}
 </style>
