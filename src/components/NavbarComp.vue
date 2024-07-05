@@ -1,4 +1,5 @@
 <template>
+  <!-- Navbarpage -->
     <nav class="navbar sticky-top bg-body-tertiary">
       <div class="nav-bar ms-auto">
         <ul class="nav nav-underline">
