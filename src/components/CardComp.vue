@@ -1,6 +1,4 @@
 <template>
-Projects
-    <div class="card" >
 
     <!-- card page -->
     <div class="card">
