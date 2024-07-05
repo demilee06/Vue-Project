@@ -1,5 +1,10 @@
 <template>
+Projects
     <div class="card" >
+
+    <!-- card page -->
+    <div class="card">
+
         <div class="card-header">
             <slot name="cardHeader"></slot>
         </div>

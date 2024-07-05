@@ -1,4 +1,5 @@
 <template>
+    <!-- footer page  -->
     <div class="footer">
         <div class="mt-5">
             <div class="d-flex justify-content-center">

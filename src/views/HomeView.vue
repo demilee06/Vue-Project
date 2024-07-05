@@ -1,5 +1,5 @@
 <template>
-  
+  <!-- landing page -->
   <div class="container" id="container">
     <div class="row align-items-center min-vh-100">
         <div class="col">

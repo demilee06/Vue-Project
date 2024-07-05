@@ -1,4 +1,5 @@
 <template>
+  <!-- About page -->
   <div class="container">
     <div class="row">
       <CardComp v-for="about in aboutMe" :key="about" style="width: 100%;">
