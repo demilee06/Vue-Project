@@ -2,10 +2,10 @@
   <!-- landing page -->
   <div class="container" id="container">
     <div class="row align-items-center min-vh-100">
-        <div class="col">
+        <div class="col-md-6" id="x">
           <img src="https://demilee06.github.io/Portfolio-images/images/Black%20and%20white%20photo%20of%20Me.jpg" alt="a photo of me" loading="lazy" class="img-fluid rounded-5 shadow "  >
         </div>
-          <div class="col">
+          <div class="col-md-6">
             <h2 class="myName my-5 display-2">CHLOE ALMAZIEN</h2>
             <h4 class="full-stack">I AM AN ASPIRING FULL-STACK DEVELOPER</h4>
             <br>
@@ -34,10 +34,19 @@ export default {
 }
 </script>
 <style scoped>
+.img-fluid[data-v-9ea40744] {
+    -o-object-fit: contain;
+    object-fit: cover;
+}
+.row{
+  width: 100%;
+}
+#x{
+  padding:0;
+}
 img{
   height:500px;
   width:449px;
-  object-fit: contain;
 }
 .img-fluid {
   object-fit: contain;
