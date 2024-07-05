@@ -1,11 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
-</template>
+  <div class="wrapper">
+    <NavbarComp/>
+      <main>
+        <router-view/>
+      </main>
+      <Footer/>
+  </div>
 
+   
+</template>
+<script>
+import NavbarComp from '@/components/NavbarComp.vue'
+import Footer from '@/components/FooterComp.vue'
+export default {
+  components:{
+    NavbarComp,
+    Footer
+  },
+  computed: {
+    aboutMe(){
+      return this.$store.state.aboutMe
+    }
+  },
+  mounted() {
+    this.$store.dispatch('getAboutMe')
+  }
+
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -27,4 +49,15 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+body{
+  text-align: center;
+  background-image: url('https://demilee06.github.io/images-bootstrap-project/depositphotos_101467770-stock-photo-white-gray-background-with-soft.jpg');
+}
+.wrapper{
+  display: grid;
+  grid-template-rows: auto minmax(100dvh, 100%) auto;
+}
+
+
 </style>
