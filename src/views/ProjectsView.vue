@@ -12,9 +12,9 @@
                     <p>{{ project.description }}</p>
                   </div>
                   <div class="card-footer">
-                    <small class="text-muted"><a :href="project.github">GitHub Respository</a></small>
+                    <small class="text-muted"><a :href="project.github" target="_blank">GitHub Respository</a></small>
                     <br>  
-                    <small class="text-muted"><a :href="project.vercel">Vercel Host</a></small>
+                    <small class="text-muted"><a :href="project.vercel" target="_blank">Vercel Host</a></small>
                   </div>
                 </template>
               
