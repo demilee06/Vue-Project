@@ -34,24 +34,20 @@ export default {
 }
 </script>
 <style scoped>
-.img-fluid[data-v-9ea40744]{
-   -o-object-fit: contain;
-   object-fit: cover;
+
+.img-fluid[data-v-9ea40744] {
+    -o-object-fit: contain;
+    object-fit: cover;
 }
-.row{
-  width: 100%;
-}
-#x{
-  padding:0px;
+
+
 }
 img{
   height:500px;
   width:449px;
-  
+
 }
-.img-fluid {
-  object-fit: contain;
-}
+
 
 .img_3{
   width:48px;
@@ -65,12 +61,7 @@ img{
   width:48px;
   height:48px;
 }
-@media only screen and (min-width: 600px){
 
-}
-@media only screen and (Min-width: 480px){
-  
-}
 
  
 </style>

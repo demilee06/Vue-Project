@@ -1,5 +1,6 @@
 <template>
   <br><br> 
+  <!-- testimonial page -->
     <div class="testimonials container">
       <div class="row gap-2 justify-content-evenly">
         <card-comp v-for="testimonial in getTestimonial"  :key="testimonial" class="rounded-5 shadow" >

@@ -2,6 +2,7 @@
   <div class="wrapper">
     <NavbarComp/>
       <main>
+        <SpinnerComp/>
         <router-view/>
       </main>
       <Footer/>
@@ -12,10 +13,12 @@
 <script>
 import NavbarComp from '@/components/NavbarComp.vue'
 import Footer from '@/components/FooterComp.vue'
+import SpinnerComp from './components/SpinnerComp.vue';
 export default {
   components:{
     NavbarComp,
-    Footer
+    Footer,
+    SpinnerComp
   },
   computed: {
     aboutMe(){
