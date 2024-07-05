@@ -3,7 +3,7 @@
   <div class="container" id="container">
     <div class="row align-items-center min-vh-100">
         <div class="col">
-          <img src="https://demilee06.github.io/Portfolio-images/images/Black%20and%20white%20photo%20of%20Me.jpg" alt="a photo of me" loading="lazy" class="img-fluid rounded-5 shadow">
+          <img src="https://demilee06.github.io/Portfolio-images/images/Black%20and%20white%20photo%20of%20Me.jpg" alt="a photo of me" loading="lazy" class="img-fluid rounded-5 shadow "  >
         </div>
           <div class="col">
             <h2 class="myName my-5 display-2">CHLOE ALMAZIEN</h2>
@@ -37,7 +37,12 @@ export default {
 img{
   height:500px;
   width:449px;
+  object-fit: contain;
 }
+.img-fluid {
+  object-fit: contain;
+}
+
 .img_3{
   width:48px;
   height:48px;
@@ -57,5 +62,5 @@ img{
   
 }
 
-
+ 
 </style>
