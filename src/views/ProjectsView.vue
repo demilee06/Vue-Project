@@ -1,7 +1,8 @@
 <template>
-    <div class="project card-group card-group-scroll container">
-        <div class="row gap-2 ">
-            <card-comp v-for="project in getProjects" :key="project">
+    <div class="project card-group card-group-scroll">
+        <div class="d-flex flex-wrap justify-content-center">
+          <card-comp v-for="project in getProjects" :key="project">
+             
                 <template #cardHeader>
                   <h2 class="card-title">{{ project.name }}</h2>
                 </template>
@@ -16,7 +17,9 @@
                     <small class="text-muted"><a :href="project.vercel">Vercel Host</a></small>
                   </div>
                 </template>
+              
               </card-comp>
+
           </div>
       </div>
                     
@@ -56,18 +59,9 @@ export default {
   }
 }
 </script>
-<style scoped>
-@media only screen and (max-width: 600px){
 
-}
-@media only screen and (max-width: 480px){
-  /* .container{ */
-    /* display:flex;
-    justify-content: center; */
-    /* margin:auto; */
-    /* position: relative;
-    left:0;
-    right:0; */
-  /* } */
+<style scoped>
+.row.gap-2{
+  margin-start:10%;
 }
 </style>
