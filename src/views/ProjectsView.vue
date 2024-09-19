@@ -1,7 +1,7 @@
 <template>
-    <div class="project card-group card-group-scroll">
-        <div class="d-flex flex-wrap justify-content-center">
-          <card-comp v-for="project in getProjects" :key="project">
+    <div class="project card-group card-group-scroll agh">
+        <div class="row justify-content-center">
+          <card-comp class="col-m-3" v-for="project in getProjects" :key="project">
              
                 <template #cardHeader>
                   <h2 class="card-title">{{ project.name }}</h2>
@@ -61,7 +61,13 @@ export default {
 </script>
 
 <style scoped>
-.row.gap-2{
-  margin-start:10%;
+.card-footer{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.agh{
+  margin-top: 120px;
 }
 </style>

@@ -1,16 +1,16 @@
 <template>
   <!-- About page -->
   <div class="container">
-    <div class="row">
+    <div class="box">
       <CardComp v-for="about in aboutMe" :key="about" style="width: 100%;">
         <template #cardHeader>
-          <h3 class="display-3">{{ about.name }}</h3>
+          <span class="title">{{ about.name }}</span>
 
         </template>
         <template #cardBody>
-          <p class="fs-3"><i>{{ about.message }}</i></p>
+          <p ><i>{{ about.message }}</i></p>
           
-          <p class="fs-3"><i>{{ about.messageTwo }}</i></p>
+          <p ><i>{{ about.messageTwo }}</i></p>
         </template>
       </CardComp>
     </div>
@@ -40,7 +40,96 @@ export default{
 }
 </script>
 <style scoped>
+.container {
+  color: white;
+  position: relative;
+  font-family: sans-serif;
+  padding-top: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.container::before,
+.container::after {
+  content: "";
+  background-color: #fab5704c;
+  position: absolute;
+}
+
+.container::before {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  top: 30%;
+  right: 7%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  top: 8%;
+  right: 5%;
+  border: 1px solid;
+}
+
+.container .box {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.7rem;
+  transition: all ease 0.3s;
+  
+}
+
+.container .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .box .title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.container .box div strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.container .box div p {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.container .box div span {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.container .box div span:nth-child(3) {
+  font-weight: 500;
+  margin-right: 0.2rem;
+}
+
+.container .box:hover {
+  box-shadow: 0px 0px 20px 1px #ffbb763f;
+  border: 1px solid rgba(255, 255, 255, 0.454);
+}
+span{
+ font-family:sans-serif;
+ font-style: italic;
+}
 </style>
 
   

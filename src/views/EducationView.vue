@@ -3,7 +3,7 @@
   <div class="education container">
 
     
-    <div class="row">
+    <div class="row1">
       <h2>EDUCATION</h2>
     </div>
     <div class="row gap-2">
@@ -21,11 +21,11 @@
 
       </card-comp>
     </div>
-    <div class="row">
+    <div class="row2">
       <h2>WORK EXPERIENCE</h2>
     </div>
-    <div class="row justify-content-between">
-      <card-comp v-for="workExp in getWork" :key="workExp">
+    <div class="row justify-content-evenly">
+      <card-comp v-for="workExp in getWork" :key="workExp" >
         <template #cardHeader>
           <h3 class="card-title">{{ workExp.placeOfWork }}</h3>
         </template>
@@ -44,7 +44,7 @@
     <div class="row">
       <h2>SKILLS</h2>
     </div>
-    <div class="row gap-2 justify-content-between">
+    <div class="row  justify-content-evenly">
       <card-comp v-for="skill in getSkill" :key="skill">
         <template #cardHeader>
           <h5 class="card-title">{{ skill.name }}</h5>
@@ -89,5 +89,20 @@ export default {
 }
 </script>
 <style scoped>
-
+.education container{
+  background-color: #fff;
+  padding:50px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  height: 100%;
+  color: black;
+}
+.row1{
+  padding:50px;
+}
+h2{
+  text-align: center;
+}
 </style>

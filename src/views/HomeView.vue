@@ -39,16 +39,11 @@ export default {
     -o-object-fit: contain;
     object-fit: cover;
 }
-
-
-}
 img{
   height:500px;
   width:449px;
 
 }
-
-
 .img_3{
   width:48px;
   height:48px;

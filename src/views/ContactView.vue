@@ -60,6 +60,11 @@ export default {
 }
 </script>
 <style scoped>
- 
+ .contact{
+  margin-top: 10%;
+ }
+ h1{
+  font-style: italic;
+ }
 </style>
       

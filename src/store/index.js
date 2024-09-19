@@ -7,7 +7,7 @@ export default createStore({
     education:null,
     skills:null,
     workExp:null,
-    testimonials:null
+   
   },
   getters: {
   },
@@ -26,9 +26,6 @@ export default createStore({
     },
     setWorkExp(state,payload){
       state.workExp = payload
-    },
-    setTestimonials(state,payload){
-      state.testimonials = payload
     }
   },
   actions: {
@@ -36,14 +33,14 @@ export default createStore({
       let fetchedInfo = await fetch('https://demilee06.github.io/First-API/Data/data.json')
       let data = await fetchedInfo.json()
       //dependant on the json file
-      let {aboutMe,education,Projects,skills,workExp,testimonials} = data
+      let {aboutMe,education,Projects,skills,workExp} = data
 
       commit("setAboutMe",aboutMe)
       commit("setEducation",education)
       commit("setProjects",Projects)
       commit("setSkills",skills)
       commit("setWorkExp",workExp)
-      commit("setTestimonials",testimonials)
+      
     }
     },
   modules: {

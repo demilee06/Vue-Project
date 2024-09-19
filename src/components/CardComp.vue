@@ -73,7 +73,7 @@
 </template> -->
 <script>
 export default {
-    props: ['aboutMe', 'projects', 'education', 'skills', 'workExp', 'testimonials']
+    props: ['aboutMe', 'projects', 'education', 'skills', 'workExp']
 }
 </script>
 <style scoped>

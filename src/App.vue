@@ -1,66 +1,43 @@
 <template>
-  <div class="wrapper">
-    <NavbarComp/>
+  <div class="app">
+    <SpinnerComp v-if="showSpinner" />
+    <div v-else>
+      <NavbarComp></NavbarComp>
       <main>
-        <SpinnerComp/>
-        <router-view/>
+        <router-view />
       </main>
-      <Footer/>
+      <FooterComp />
+    </div>
   </div>
-
-   
 </template>
 <script>
-import NavbarComp from '@/components/NavbarComp.vue'
-import Footer from '@/components/FooterComp.vue'
-import SpinnerComp from './components/SpinnerComp.vue';
+import NavbarComp from "@/components/NavbarComp.vue";
+import FooterComp from "@/components/FooterComp.vue";
+import SpinnerComp from "@/components/SpinnerComp.vue";
 export default {
-  components:{
+  components: {
     NavbarComp,
-    Footer,
-    SpinnerComp
+    FooterComp,
+    SpinnerComp,
   },
-  computed: {
-    aboutMe(){
-      return this.$store.state.aboutMe
-    }
+  data() {
+    return {
+      showSpinner: true,
+    };
   },
   mounted() {
-    this.$store.dispatch('getAboutMe')
-  }
-
-}
+    setTimeout(() => {
+      this.showSpinner = false;
+    }, 2000); // 2 seconds delay before hiding the spinner
+  },
+};
 </script>
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped>
+.app{
+ background-image: url(https://demilee06.github.io/Portfolio-images/images/depositphotos_101467770-stock-photo-white-gray-background-with-soft.jpg);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-body{
-  text-align: center;
-  background-image: url('https://demilee06.github.io/images-bootstrap-project/depositphotos_101467770-stock-photo-white-gray-background-with-soft.jpg');
-}
-.wrapper{
-  display: grid;
-  grid-template-rows: auto minmax(100dvh, 100%) auto;
-}
-
-
 </style>
