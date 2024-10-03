@@ -13,6 +13,23 @@
           <p ><i>{{ about.messageTwo }}</i></p>
         </template>
       </CardComp>
+      
+    </div>
+    <br><br>
+    <div class="row">
+      <h2 class="skill">SKILLS</h2>
+    </div>
+    <div class="row  justify-content-evenly" >
+      <card-comp v-for="skill in getSkill" :key="skill" id="cards">
+        <template #cardHeader >
+          <h5 class="card-title">{{ skill.name }}</h5>
+        </template>
+        <template #cardBody>
+          <a :href=skill.link> <img :src=skill.image alt="html5" width="40" height="40" /> </a>
+        </template>
+        
+      </card-comp>
+      
     </div>
     
   </div>
@@ -32,6 +49,9 @@ export default{
   computed: {
     aboutMe(){
       return this.$store.state.aboutMe
+    },
+    getSkill() {
+      return this.$store.state.skills
     }
   },
   mounted() {
@@ -129,6 +149,14 @@ export default{
 span{
  font-family:sans-serif;
  font-style: italic;
+}
+.skill{
+  color:black;
+  font-style: italic;
+}
+#cards{
+  display: flex;
+  margin: 1vw;
 }
 </style>
 

@@ -3,7 +3,7 @@
   <div class="education container">
 
     
-    <div class="row1">
+    <div class="row1"> <br><br><br>
       <h2>EDUCATION</h2>
     </div>
     <div class="row gap-2">
@@ -41,21 +41,7 @@
       </card-comp>
       
     </div>
-    <div class="row">
-      <h2>SKILLS</h2>
-    </div>
-    <div class="row  justify-content-evenly">
-      <card-comp v-for="skill in getSkill" :key="skill">
-        <template #cardHeader>
-          <h5 class="card-title">{{ skill.name }}</h5>
-        </template>
-        <template #cardBody>
-          <a :href=skill.link> <img :src=skill.image alt="html5" width="40" height="40" /> </a>
-        </template>
-        
-      </card-comp>
-      
-    </div>
+    
   </div> 
 
 </template>
@@ -78,9 +64,6 @@ export default {
     },
     getWork() {
       return this.$store.state.workExp
-    },
-    getSkill() {
-      return this.$store.state.skills
     }
   },
   mounted() {

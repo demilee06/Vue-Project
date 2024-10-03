@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <CardComp class="col-m-3" v-for="project in getProjects" :key="project">
         <template #cardHeader>
-          <h2 class="card-title">{{ project.name }}</h2>
+          <h3 class="card-title">{{ project.name }}</h3>
         </template>
         <template #cardBody>
           <img :src="project.image" class="card-img-top" :alt="project.name" />
@@ -56,7 +56,9 @@ export default {
 img{
   height:200px;
 }
-
+.card-body{
+  height: 25vh;
+}
 .prod{
  padding:120px;
  justify-content: space-evenly;

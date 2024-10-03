@@ -34,9 +34,9 @@ export default {
 </script>
 <style scoped>
 .app{
- background-image: url(https://demilee06.github.io/Portfolio-images/images/depositphotos_101467770-stock-photo-white-gray-background-with-soft.jpg);
+ background-image: url(https://demilee06.github.io/Portfolio-images/Chloes_background_Img.png);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }

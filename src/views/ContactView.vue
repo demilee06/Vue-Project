@@ -61,7 +61,7 @@ export default {
 </script>
 <style scoped>
  .contact{
-  margin-top: 10%;
+  padding:100px
  }
  h1{
   font-style: italic;
