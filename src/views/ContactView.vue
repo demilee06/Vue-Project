@@ -18,7 +18,7 @@
                   </div>
                   <div class="phone">
                     <i class="las la-phone"></i>
-                    <h4>Whatsapp No. :</h4>
+                    <h4>Contact No. :</h4>
                     <p><i>060 632 6162</i></p>
                   </div>
                 </div>

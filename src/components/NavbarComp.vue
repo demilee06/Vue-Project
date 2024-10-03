@@ -41,7 +41,7 @@
                             <router-link class="nav-link" to="/about" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">About</button></router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/education" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">Education</button></router-link>
+                            <router-link class="nav-link" to="/education" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">Education & Experience</button></router-link>
                           </li>
                           <li class="nav-item">
                             <router-link class="nav-link" to="/projects" aria-current="page"><button data-bs-dismiss="offcanvas" aria-label="Close">Projects</button></router-link>
