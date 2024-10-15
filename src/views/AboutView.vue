@@ -8,46 +8,46 @@
 
         </template>
         <template #cardBody>
-          <p ><i>{{ about.message }}</i></p>
-          
-          <p ><i>{{ about.messageTwo }}</i></p>
+          <p><i>{{ about.message }}</i></p>
+
+          <p><i>{{ about.messageTwo }}</i></p>
         </template>
       </CardComp>
-      
+
     </div>
-    <br><br>
+    
     <div class="row">
       <h2 class="skill">SKILLS</h2>
     </div>
-    <div class="row  justify-content-evenly" >
+    <div class="row  justify-content-evenly">
       <card-comp v-for="skill in getSkill" :key="skill" id="cards">
-        <template #cardHeader >
-          <h5 class="card-title">{{ skill.name }}</h5>
+        <template #cardHeader>
+          <h5 class="card-title" id="cart">{{ skill.name }}</h5>
         </template>
         <template #cardBody>
-          <a :href=skill.link> <img :src=skill.image alt="html5" width="40" height="40" /> </a>
+          <a :href=skill.link> <img :src=skill.image alt="html5" width="40" height="40" id="carb" /> </a>
         </template>
-        
+
       </card-comp>
-      
+
     </div>
-    
+
   </div>
 </template>
 <script>
 import CardComp from '@/components/CardComp.vue'
-export default{
+export default {
   components: {
     CardComp
 
   },
-  data(){
-    return{
-      
+  data() {
+    return {
+
     }
   },
   computed: {
-    aboutMe(){
+    aboutMe() {
       return this.$store.state.aboutMe
     },
     getSkill() {
@@ -105,7 +105,7 @@ export default{
   backdrop-filter: blur(20px);
   border-radius: 0.7rem;
   transition: all ease 0.3s;
-  
+
 }
 
 .container .box {
@@ -146,21 +146,31 @@ export default{
   box-shadow: 0px 0px 20px 1px #ffbb763f;
   border: 1px solid rgba(255, 255, 255, 0.454);
 }
-span{
- font-family:sans-serif;
- font-style: italic;
-}
-.skill{
-  color:black;
+
+span {
+  font-family: sans-serif;
   font-style: italic;
 }
-#cards{
+
+.skill {
+  color: black;
+  font-style: italic;
+}
+
+#cards {
   display: flex;
   margin: 1vw;
 }
-</style>
 
-  
-    
-    
-    
+#cart {
+  display: flex;
+  justify-content: center;
+}
+
+#carb {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
