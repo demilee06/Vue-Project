@@ -87,7 +87,7 @@
 </script>
 <style scoped>
 .container {
-  color: white;
+  color: transparent;
   position: relative;
   font-family: sans-serif;
   padding-top: 30vh;
@@ -122,8 +122,8 @@
 }
 
 .container .box {
-  width: 100%;
-  height: 500px;
+  width: 980px;
+  height: 400px;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.074);
   border: 1px solid rgba(255, 255, 255, 0.222);
@@ -200,11 +200,13 @@ span {
   margin-left: auto;
   margin-right: auto;
 }
+
 .title{
   color: white;
 }
 .info{
   color:white;
+  padding: 2vh;
 }
 #cards.card{
   width: 200px;
