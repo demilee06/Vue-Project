@@ -9,10 +9,16 @@
             <h2 class="myName my-5 display-2">CHLOE ALMAZIEN</h2>
             <h4 class="full-stack">I AM AN ASPIRING FULL-STACK DEVELOPER</h4>
             <br>
-             
             <a href="https://github.com/projects" target="_blank"><img class="img_3"  src="https://img.icons8.com/fluency/48/github.png" alt="github" /></a>
             <a href="mailto: chloealmazien6@gmail.com " target="_blank"> <img class="img_4"  src="https://img.icons8.com/doodle/48/email--v1.png" alt="email--v1" /></a>
             <a href="https://www.linkedin.com/in/chloe-almazien-6a0959317/" target="_blank"><img class="img_5" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/></a>
+            <br><br>
+            <!-- From Uiverse.io by Codecite --> 
+            <div class="button">
+              <a href="#" class="anchor">
+                <span>Download CV</span>
+              </a>
+            </div>  
           </div>
       </div>
 
@@ -21,9 +27,6 @@
 
 <script>
 // @ is an alias to /src
-
-
-
 
 export default {
   name: 'HomeView',
@@ -34,6 +37,9 @@ export default {
 }
 </script>
 <style scoped>
+.container{
+  padding:70px;
+}
 
 .img-fluid[data-v-9ea40744] {
     -o-object-fit: contain;
@@ -57,6 +63,44 @@ img{
   height:48px;
 }
 
+/* From Uiverse.io by Codecite */ 
+.anchor {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid #000;
+  padding: 14px 40px 13px;
+  overflow: hidden;
+  position: relative;
+}
 
+.anchor:hover {
+  color: #4e484a;
+}
+
+.button a::before {
+  position: absolute;
+  content: "";
+  z-index: 0;
+  background-color: #000;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  height: 111%;
+  transition: all .3s ease;
+}
+
+.button a:hover::before {
+  height: 11%;
+}
+
+.button span {
+  position: relative;
+  z-index: 2;
+  transition: all .3s ease;
+}
  
 </style>
