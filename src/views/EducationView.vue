@@ -6,7 +6,7 @@
     <div class="row1"> <br><br><br>
       <h2>EDUCATION</h2>
     </div>
-    <div class="row gap-2">
+    <div class="row gap-3">
       <card-comp v-for="education in getEdu" :key="education" style="width: 100%;">
         <template #cardHeader>
           <h3 class="card-title">{{ education.placeOfInstitution }}</h3>
@@ -84,6 +84,15 @@ export default {
 }
 .row1{
   padding:50px;
+ 
+}
+.row2{
+  padding:50px;
+ 
+}
+.card-title{
+  display: flex;
+  justify-content: center;
 }
 h2{
   text-align: center;

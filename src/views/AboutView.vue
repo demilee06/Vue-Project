@@ -5,38 +5,63 @@
       <CardComp v-for="about in aboutMe" :key="about" style="width: 100%;">
         <template #cardHeader>
           <span class="title">{{ about.name }}</span>
-
+  
         </template>
         <template #cardBody>
           <p><i>{{ about.message }}</i></p>
-
+  
           <p><i>{{ about.messageTwo }}</i></p>
         </template>
       </CardComp>
-
+  
     </div>
     
     <div class="row">
-      <h2 class="skill">SKILLS</h2>
+      <h3 class="skill">My Skills</h3>
     </div>
-    <div class="row  justify-content-evenly">
+    <div class="row justify-content-evenly">
       <card-comp v-for="skill in getSkill" :key="skill" id="cards">
         <template #cardHeader>
           <h5 class="card-title" id="cart">{{ skill.name }}</h5>
         </template>
         <template #cardBody>
-          <a :href=skill.link> <img :src=skill.image alt="html5" width="40" height="40" id="carb" /> </a>
+          <a :href=skill.link> <img :src=skill.image alt="html5" width="60" height="60" id="carb" /> </a>
         </template>
-
       </card-comp>
-
+  
+    </div>
+    <div class="row">
+      <h3 class="skill">My Badges</h3>
+    </div>
+    <div class="row justify-content-evenly">
+      <card-comp v-for="skill in getSkill" :key="skill" id="cards">
+        <template #cardHeader>
+          <h5 class="card-title" id="cart">Javascript Essentials 1</h5>
+        </template>
+        <template #cardBody>
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8af62b18-3a88-45d1-b5b5-9a629ea815f0" data-share-badge-host="https://www.credly.com"></div>
+        </template>
+      </card-comp>
+  
     </div>
 
+    
+            
+        
+    
   </div>
+
+
+ 
+
+<div class="card"></div>
+    
+           
+    
 </template>
 <script>
-import CardComp from '@/components/CardComp.vue'
-export default {
+ import CardComp from '@/components/CardComp.vue'
+ export default {
   components: {
     CardComp
 
@@ -54,10 +79,11 @@ export default {
       return this.$store.state.skills
     }
   },
-  mounted() {
+  mounted(){
     this.$store.dispatch('getAboutMe')
   }
-}
+
+ }
 </script>
 <style scoped>
 .container {
@@ -118,6 +144,8 @@ export default {
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.1em;
+  display:flex;
+  justify-content: center;
 }
 
 .container .box div strong {
@@ -126,7 +154,7 @@ export default {
 }
 
 .container .box div p {
-  margin: 0;
+  margin:0;
   font-size: 0.9em;
   font-weight: 300;
   letter-spacing: 0.1em;
@@ -173,4 +201,13 @@ span {
   margin-right: auto;
 }
 
+/* From Uiverse.io by Codewithvinay */ 
+.card {
+ width: 190px;
+ height:190;
+ border-radius: 50px;
+ background: #e0e0e0;
+ box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+}
 </style>
