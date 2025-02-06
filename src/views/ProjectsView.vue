@@ -1,6 +1,6 @@
 <template>
   <div class="project card-group card-group-scroll prod">
-    <div class="row justify-content-center">
+    <div class="row justify-content-evenly">
       <CardComp class="col-m-3" v-for="project in getProjects" :key="project">
         <template #cardHeader>
           <h3 class="card-title">{{ project.name }}</h3>
@@ -60,8 +60,9 @@ img{
   height: 25vh;
 }
 .prod{
- padding:120px;
- justify-content: space-evenly;
-}
+ padding:150px;
+ display: flex;
+ justify-content: space-between;
 
+}
 </style>

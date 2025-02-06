@@ -1,4 +1,4 @@
-<template>
+npm<template>
 
     <!-- card page -->
     <div class="card">
@@ -9,7 +9,7 @@
         <div class="card-body">
             <slot name="cardBody"></slot>
         </div>
-        
+        <div class="card"></div>
     </div>
     
 </template>
@@ -80,5 +80,13 @@ export default {
  .card{
     width: 18rem
  }
-
+/* From Uiverse.io by Codewithvinay */ 
+.card {
+ width: 500px;
+ height:190;
+ border-radius: 40px;
+ background: #e0e0e0;
+ box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+}
 </style>
