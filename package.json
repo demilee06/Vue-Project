@@ -10,8 +10,10 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "core-js": "^3.8.3",
+    "express": "^4.21.2",
     "register-service-worker": "^1.7.2",
     "vue": "^3.2.13",
+    "vue-portfolio": "github:demilee06/Vue-Project",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
@@ -26,5 +28,18 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3"
-  }
+  },
+  "description": "```\r npm install\r ```",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demilee06/Vue-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demilee06/Vue-Project/issues"
+  },
+  "homepage": "https://github.com/demilee06/Vue-Project#readme",
+  "keywords": []
 }

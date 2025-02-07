@@ -8,9 +8,9 @@
   
         </template>
         <template #cardBody>
-          <p><i>{{ about.message }}</i></p>
+          <p class="info"><i>{{ about.message }}</i></p>
   
-          <p><i>{{ about.messageTwo }}</i></p>
+          <p class="info"><i>{{ about.messageTwo }}</i></p>
         </template>
       </CardComp>
   
@@ -103,7 +103,7 @@
 </script>
 <style scoped>
 .container {
-  color: white;
+  color: transparent;
   position: relative;
   font-family: sans-serif;
   padding-top: 30vh;
@@ -138,8 +138,8 @@
 }
 
 .container .box {
-  width: 100%;
-  height: 100%;
+  width: 980px;
+  height: 400px;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.074);
   border: 1px solid rgba(255, 255, 255, 0.222);
@@ -217,6 +217,7 @@ span {
   margin-right: auto;
 }
 
+<<<<<<< HEAD
 /* From Uiverse.io by lowa2006 */ 
 .card {
   width: 50em;
@@ -235,6 +236,19 @@ span {
   border-bottom-left-radius: 20px;
   display: flex;
   flex-direction: column;
+=======
+.title{
+  color: white;
+}
+.info{
+  color:white;
+  padding: 2vh;
+}
+#cards.card{
+  width: 200px;
+  height: 200px;
+  color: white;
+>>>>>>> 2c60733add1aea66c00fc5799a3eda14e488f552
 }
 
 .card span {
