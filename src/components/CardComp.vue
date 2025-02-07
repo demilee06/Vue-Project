@@ -77,9 +77,6 @@ export default {
 }
 </script>
 <style scoped>
- .card{
-    width: 18rem
- }
 /* From Uiverse.io by lowa2006 */ 
 .card {
   width: 17em;

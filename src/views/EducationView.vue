@@ -13,10 +13,10 @@
         </template>
         <template #cardBody>
           <h6 class="card-subtitle mb-2 text-body-secondary">{{ education.year }}</h6>
-          <p class="card-text">{{ education.description }}</p>
+          <p class="info">{{ education.description }}</p>
           <br>
-          <p class="card-text"> Name:{{ education.contact[0].name }}</p>
-          <p class="card-text"> Contact: {{ education.contact[0].contactDetails }}</p>
+          <p class="info"> Name:{{ education.contact[0].name }}</p>
+          <p class="info"> Contact: {{ education.contact[0].contactDetails }}</p>
         </template>
 
       </card-comp>
@@ -31,11 +31,11 @@
         </template>
         <template #cardBody>
           <h6 class="card-subtitle mb-2 text-body-secondary">{{ workExp.year }}</h6>
-          <p class="card-text">{{ workExp.description }}</p>
-          <p class="card-text">{{ workExp.contact[0].name }}</p>
-          <p class="card-text">{{ workExp.contact[0].cell }}</p>
-          <p class="card-text">{{ workExp.contact[0].position }}</p>
-          <p class="card-text">{{ workExp.contact[0].email }}</p>
+          <p class="info">{{ workExp.description }}</p>
+          <p class="info">{{ workExp.contact[0].name }}</p>
+          <p class="info">{{ workExp.contact[0].cell }}</p>
+          <p class="info">{{ workExp.contact[0].position }}</p>
+          <p class="info">{{ workExp.contact[0].email }}</p>
         </template>
         
       </card-comp>
