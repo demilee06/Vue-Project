@@ -17,6 +17,9 @@
     </div> -->
 
     <!-- From Uiverse.io by lowa2006 --> 
+    <div class="row">
+      <h5 class="skill">About Me</h5>
+    </div>
       <div class="card">
         <CardComp v-for="about in aboutMe" :key="about" style="width: 100%;">
           <template #cardHeader>
@@ -33,7 +36,7 @@
       </div> 
     
     <div class="row">
-      <h3 class="skill">My Skills</h3>
+      <h5 class="skill">My Skills</h5>
     </div>
     <div class="row justify-content-evenly">
       <card-comp v-for="skill in getSkill" :key="skill" id="cards">
@@ -106,7 +109,7 @@
   color: transparent;
   position: relative;
   font-family: sans-serif;
-  padding-top: 30vh;
+  padding-top: 18vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,7 +220,7 @@ span {
   margin-right: auto;
 }
 
-<<<<<<< HEAD
+
 /* From Uiverse.io by lowa2006 */ 
 .card {
   width: 50em;
@@ -236,7 +239,7 @@ span {
   border-bottom-left-radius: 20px;
   display: flex;
   flex-direction: column;
-=======
+}
 .title{
   color: white;
 }
@@ -248,7 +251,6 @@ span {
   width: 200px;
   height: 200px;
   color: white;
->>>>>>> 2c60733add1aea66c00fc5799a3eda14e488f552
 }
 
 .card span {
@@ -310,5 +312,14 @@ span {
   cursor: pointer;
 }
 
+.skill {
+  padding: 1vh;
+  font-family: "Poppins", sans-serif; /* Modern, clean look */
+  font-size: 1.5rem; /* Adjust size for readability */
+  font-weight: 600; /* Semi-bold for emphasis */
+  text-transform: uppercase; /* Optional: Makes it look more refined */
+  letter-spacing: 1px; /* Adds slight spacing for a sleek look */
+  color: #333; /* Dark gray for professionalism */
+}
 
 </style>
