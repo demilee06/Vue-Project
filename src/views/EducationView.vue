@@ -7,19 +7,23 @@
       <h2>EDUCATION</h2>
     </div>
     <div class="row gap-3">
-      <card-comp v-for="education in getEdu" :key="education" style="width: 100%;">
-        <template #cardHeader>
-          <h3 class="card-title">{{ education.placeOfInstitution }}</h3>
-        </template>
-        <template #cardBody>
-          <h6 class="card-subtitle mb-2 text-body-secondary">{{ education.year }}</h6>
-          <p class="card-text">{{ education.description }}</p>
-          <br>
-          <p class="card-text"> Name:{{ education.contact[0].name }}</p>
-          <p class="card-text"> Contact: {{ education.contact[0].contactDetails }}</p>
-        </template>
+      <transition-group name="fade-left" tag="div">
+        <card-comp v-for="education in getEdu" :key="education" style="width: 100%;">
+          <template #cardHeader>
+            <h3 class="card-title">{{ education.placeOfInstitution }}</h3>
+          </template>
+          <template #cardBody>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{ education.year }}</h6>
+            <p class="card-text">{{ education.description }}</p>
+            <br>
+            <p class="card-text"> Name:{{ education.contact[0].name }}</p>
+            <p class="card-text"> Contact: {{ education.contact[0].contactDetails }}</p>
+          </template>
 
-      </card-comp>
+        </card-comp>
+
+      </transition-group>
+     
     </div>
     <div class="row2">
       <h2>WORK EXPERIENCE</h2>
@@ -30,7 +34,7 @@
           <h3 class="card-title">{{ workExp.placeOfWork }}</h3>
         </template>
         <template #cardBody>
-          <h6 class="card-subtitle mb-2 text-body-secondary">{{ workExp.year }}</h6>
+          <h6 class="card-subtitle mb-2 text-body-secondary" id="work">{{ workExp.year }}</h6>
           <p class="card-text">{{ workExp.description }}</p>
           <p class="card-text">{{ workExp.contact[0].name }}</p>
           <p class="card-text">{{ workExp.contact[0].cell }}</p>
@@ -93,8 +97,34 @@ export default {
 .card-title{
   display: flex;
   justify-content: center;
+  color: #fff;
 }
 h2{
   text-align: center;
+}
+
+.fade-left-enter-active {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-left-leave-active {
+  opacity: 0;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.card-text{
+  color: #fff;
+}
+.text-body-secondary {
+    color: #fff; 
 }
 </style>
