@@ -1,7 +1,7 @@
 <template>
   <!-- About page -->
   <div class="container">
-    <div class="box">
+    <!-- <div class="box">
       <CardComp v-for="about in aboutMe" :key="about" style="width: 100%;">
         <template #cardHeader>
           <span class="title">{{ about.name }}</span>
@@ -14,10 +14,29 @@
         </template>
       </CardComp>
   
+    </div> -->
+
+    <!-- From Uiverse.io by lowa2006 --> 
+    <div class="row">
+      <h5 class="skill">About Me</h5>
     </div>
+      <div class="card">
+        <CardComp v-for="about in aboutMe" :key="about" style="width: 100%;">
+          <template #cardHeader>
+            <span>{{about.name}}</span>
+
+          </template>
+          <template  #cardBody>
+            <p class="info">{{ about.message }}</p>
+            <p class="info">{{ about.messageTwo }}</p>
+           
+          </template>
+
+        </CardComp>
+      </div> 
     
     <div class="row">
-      <h3 class="skill">My Skills</h3>
+      <h5 class="skill">My Skills</h5>
     </div>
     <div class="row justify-content-evenly">
       <card-comp v-for="skill in getSkill" :key="skill" id="cards">
@@ -90,7 +109,7 @@
   color: transparent;
   position: relative;
   font-family: sans-serif;
-  padding-top: 30vh;
+  padding-top: 18vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,6 +220,26 @@ span {
   margin-right: auto;
 }
 
+
+/* From Uiverse.io by lowa2006 */ 
+.card {
+  width: 50em;
+  height: 22.5em;
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(
+    30px 0%,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0% 30px
+  );
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
 .title{
   color: white;
 }
@@ -213,4 +252,74 @@ span {
   height: 200px;
   color: white;
 }
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+}
+
+.card .img {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card a {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.card a:hover {
+  color: red;
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: 0.4s ease-in-out;
+}
+
+.card button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+
+.skill {
+  padding: 1vh;
+  font-family: "Poppins", sans-serif; /* Modern, clean look */
+  font-size: 1.5rem; /* Adjust size for readability */
+  font-weight: 600; /* Semi-bold for emphasis */
+  text-transform: uppercase; /* Optional: Makes it look more refined */
+  letter-spacing: 1px; /* Adds slight spacing for a sleek look */
+  color: #333; /* Dark gray for professionalism */
+}
+
 </style>
