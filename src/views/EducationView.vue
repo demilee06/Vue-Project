@@ -5,53 +5,37 @@
       <br><br><br>
       <h2>EDUCATION</h2>
     </div>
-    <div class="row gap-3">
+    <div class="row4 gap-3">
       <transition-group name="fade-left" tag="div">
-        <card-comp v-for="education in getEdu" :key="education" style="width: 100%;">
+        <card-comp v-for="education in getEdu" :key="education"  :class="{ 'small-card': index === 0 }" 
+        style="width: 100%;">
           <template #cardHeader>
             <h3 class="card-title">{{ education.placeOfInstitution }}</h3>
           </template>
           <template #cardBody>
             <h6 class="card-subtitle mb-2 text-body-secondary">{{ education.year }}</h6>
-            <p class="card-text">{{ education.description }}</p>
             <br>
-            <p class="card-text"> Name:{{ education.contact[0].name }}</p>
-            <p class="card-text"> Contact: {{ education.contact[0].contactDetails }}</p>
+            <p class="info">{{ education.description }}</p>
+            <p class="info"> Name:{{ education.contact[0].name }}</p>
+            <p class="info"> Contact: {{ education.contact[0].contactDetails }}</p>
           </template>
 
         </card-comp>
 
       </transition-group>
     </div>
-    <div class="row2">
-      <h2>WORK EXPERIENCE</h2>
-    </div>
 
-    <div class="row justify-content-evenly">
-      <card-comp v-for="workExp in getWork" :key="workExp" >
-        <template #cardHeader>
-          <h3 class="card-title">{{ workExp.placeOfWork }}</h3>
-        </template>
-        <template #cardBody>
-          <h6 class="card-subtitle mb-2 text-body-secondary" id="work">{{ workExp.year }}</h6>
-          <p class="card-text">{{ workExp.description }}</p>
-          <p class="card-text">{{ workExp.contact[0].name }}</p>
-          <p class="card-text">{{ workExp.contact[0].cell }}</p>
-          <p class="card-text">{{ workExp.contact[0].position }}</p>
-          <p class="card-text">{{ workExp.contact[0].email }}</p>
-        </template>
-        
-      </card-comp>
-
-    <div class="row ">
-      <transition-group name="fade" tag="div" class="work-container"> 
-
+    <div class="work container">
+      <div class="row2">
+        <h2>WORK EXPERIENCE</h2>
+      </div>
+      <div class="row justify-content-evenly">
         <card-comp v-for="workExp in getWork" :key="workExp" >
           <template #cardHeader>
             <h3 class="card-title">{{ workExp.placeOfWork }}</h3>
           </template>
           <template #cardBody>
-            <h6 class="card-subtitle mb-2 text-body-secondary" id="card-sub">{{ workExp.year }}</h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary" id="work">{{ workExp.year }}</h6>
             <p class="info">{{ workExp.description }}</p>
             <p class="info">{{ workExp.contact[0].name }}</p>
             <p class="info">{{ workExp.contact[0].cell }}</p>
@@ -60,12 +44,10 @@
           </template>
           
         </card-comp>
-      </transition-group>
-
-      
+      </div>
     </div>
   </div> 
-  </div> 
+  
 
 </template>
 <script>
@@ -105,22 +87,35 @@ export default {
   height: 100%;
   color: black;
 }
+
+.small-card {
+  height: 600px; /* Adjust height */
+  overflow: hidden;
+}
+
 .row {
+  padding: 50px;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically if needed */
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly; /* Ensures even spacing */
 }
 
 .row1{
-  padding:50px;
+  padding:40px;
  
 }
+
 .row2{
-  padding:50px;
- 
+  padding: 28px;
 }
+
+.row4 card-comp:first-child{
+  height: 150px; /* Adjust this value as needed */
+  overflow: hidden; /* Ensures content does not overflow */
+  margin-top: auto;
+}
+
 .card-title{
   display: flex;
   justify-content: center;
@@ -154,14 +149,6 @@ h2{
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.work-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-evenly; /* Ensures even spacing */
-  
 }
 
 .fade-left {
