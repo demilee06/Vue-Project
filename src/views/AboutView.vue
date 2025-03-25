@@ -27,8 +27,8 @@
 
           </template>
           <template  #cardBody>
-            <p class="info" in>{{ about.message }}</p>
-            <p class="info" in>{{ about.messageTwo }}</p>
+            <p class="info" >{{ about.message }}</p>
+            <p class="info" >{{ about.messageTwo }}</p>
            
           </template>
 
@@ -55,7 +55,7 @@
     <div class="row justify-content-evenly">
       <card-comp v-for="badges in getBadges" :key="badges" id="cards">
         <template #cardHeader>
-          <h5 class="card-title" id="cart">{{ badges.name }}</h5>
+          <h5 class="card-title" id="cart" bag>{{ badges.name }}</h5>
         </template>
         <template #cardBody>
           <a :href=badges.link> <img :src=badges.image alt="html5" width="90" height="80" id="carb" /> </a>
@@ -207,6 +207,7 @@ span {
 
 #cart {
   display: flex;
+  position: relative;
   justify-content: center;
 }
 
@@ -329,7 +330,7 @@ span {
   color: #333; /* Dark gray for professionalism */
 }
 
-[in]{
-  font-size: 20vh,
+[bag]{
+  text-align: center;
 }
 </style>
