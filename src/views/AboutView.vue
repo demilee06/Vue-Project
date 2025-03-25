@@ -44,7 +44,7 @@
           <h5 class="card-title" id="cart">{{ skill.name }}</h5>
         </template>
         <template #cardBody>
-          <a :href=skill.link> <img :src=skill.image alt="html5" width="60" height="60" id="carb" /> </a>
+          <a :href=skill.link> <img :src=skill.image alt="html5" width="70" height="60" id="carb" /> </a>
         </template>
       </card-comp>
   
