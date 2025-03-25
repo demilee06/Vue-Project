@@ -27,8 +27,8 @@
 
           </template>
           <template  #cardBody>
-            <p class="info">{{ about.message }}</p>
-            <p class="info">{{ about.messageTwo }}</p>
+            <p class="info" in>{{ about.message }}</p>
+            <p class="info" in>{{ about.messageTwo }}</p>
            
           </template>
 
@@ -69,14 +69,7 @@
         
     
   </div>
-
-
  
-
-
-    
-           
-    
 </template>
 <script>
  import CardComp from '@/components/CardComp.vue'
@@ -249,6 +242,7 @@ span {
 .info{
   color:white;
   padding: 2vh;
+  
 }
 #cards.card{
   width: 200px;
@@ -269,7 +263,7 @@ span {
   color: white;
   display: block;
   text-align: center;
-  font-size: 0.72em;
+  font-size: 95%;
   margin: 1em;
 }
 
@@ -335,4 +329,7 @@ span {
   color: #333; /* Dark gray for professionalism */
 }
 
+[in]{
+  font-size: 20vh,
+}
 </style>
