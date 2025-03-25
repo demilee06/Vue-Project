@@ -30,7 +30,7 @@
         <h2>WORK EXPERIENCE</h2>
       </div>
       <div class="row justify-content-evenly">
-        <card-comp v-for="workExp in getWork" :key="workExp" >
+        <card-comp v-for="workExp in getWork" :key="workExp" gue>
           <template #cardHeader>
             <h3 class="card-title">{{ workExp.placeOfWork }}</h3>
           </template>
@@ -77,7 +77,7 @@ export default {
 }
 </script>
 <style scoped>
-.education container{
+.education .container{
   background-color: #fff;
   padding:50px;
   border: 1px solid #ddd;
@@ -183,5 +183,7 @@ h2{
     transform: translateX(0);
   }
 }
+[gue]{
 
+}
 </style>

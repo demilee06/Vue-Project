@@ -73,7 +73,7 @@ npm<template>
 </template> -->
 <script>
 export default {
-    props: ['aboutMe', 'projects', 'education', 'skills', 'workExp']
+    props: ['aboutMe', 'projects', 'education', 'skills', 'badges' ,'workExp']
 }
 </script>
 <style scoped>
