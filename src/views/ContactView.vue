@@ -67,5 +67,8 @@ export default {
   font-style: italic;
  }
  
+ button{
+  border-radius: 5px;
+ }
 </style>
       
