@@ -73,14 +73,14 @@ npm<template>
 </template> -->
 <script>
 export default {
-    props: ['aboutMe', 'projects', 'education', 'skills', 'workExp']
+    props: ['aboutMe', 'projects', 'education', 'skills', 'badges' ,'workExp']
 }
 </script>
 <style scoped>
 /* From Uiverse.io by lowa2006 */ 
 .card {
-  width: 17em;
-  height: 22.5em;
+  width: 25em;
+  height: 31em;
   background: #171717;
   transition: 1s ease-in-out;
   clip-path: polygon(

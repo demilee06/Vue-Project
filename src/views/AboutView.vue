@@ -27,8 +27,8 @@
 
           </template>
           <template  #cardBody>
-            <p class="info">{{ about.message }}</p>
-            <p class="info">{{ about.messageTwo }}</p>
+            <p class="info" >{{ about.message }}</p>
+            <p class="info" >{{ about.messageTwo }}</p>
            
           </template>
 
@@ -44,21 +44,21 @@
           <h5 class="card-title" id="cart">{{ skill.name }}</h5>
         </template>
         <template #cardBody>
-          <a :href=skill.link> <img :src=skill.image alt="html5" width="60" height="60" id="carb" /> </a>
+          <a :href=skill.link> <img :src=skill.image alt="html5" width="70" height="60" id="carb" /> </a>
         </template>
       </card-comp>
   
     </div>
     <div class="row">
-      <h3 class="skill">My Badges</h3>
+      <h3 class="badge">My Badges</h3>
     </div>
     <div class="row justify-content-evenly">
-      <card-comp v-for="skill in getSkill" :key="skill" id="cards">
+      <card-comp v-for="badges in getBadges" :key="badges" id="cards">
         <template #cardHeader>
-          <h5 class="card-title" id="cart">Javascript Essentials 1</h5>
+          <h5 class="card-title" id="cart" bag>{{ badges.name }}</h5>
         </template>
         <template #cardBody>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8af62b18-3a88-45d1-b5b5-9a629ea815f0" data-share-badge-host="https://www.credly.com"></div>
+          <a :href=badges.link> <img :src=badges.image alt="html5" width="90" height="80" id="carb" /> </a>
         </template>
       </card-comp>
   
@@ -69,14 +69,7 @@
         
     
   </div>
-
-
  
-
-
-    
-           
-    
 </template>
 <script>
  import CardComp from '@/components/CardComp.vue'
@@ -96,6 +89,9 @@
     },
     getSkill() {
       return this.$store.state.skills
+    },
+    getBadges() {
+      return this.$store.state.badges
     }
   },
   mounted(){
@@ -211,6 +207,7 @@ span {
 
 #cart {
   display: flex;
+  position: relative;
   justify-content: center;
 }
 
@@ -246,6 +243,7 @@ span {
 .info{
   color:white;
   padding: 2vh;
+  
 }
 #cards.card{
   width: 200px;
@@ -266,7 +264,7 @@ span {
   color: white;
   display: block;
   text-align: center;
-  font-size: 0.72em;
+  font-size: 95%;
   margin: 1em;
 }
 
@@ -322,4 +320,17 @@ span {
   color: #333; /* Dark gray for professionalism */
 }
 
+.badge{
+  padding: 1vh;
+  font-family: "Poppins", sans-serif; /* Modern, clean look */
+  font-size: 1.5rem; /* Adjust size for readability */
+  font-weight: 600; /* Semi-bold for emphasis */
+  text-transform: uppercase; /* Optional: Makes it look more refined */
+  letter-spacing: 1px; /* Adds slight spacing for a sleek look */
+  color: #333; /* Dark gray for professionalism */
+}
+
+[bag]{
+  text-align: center;
+}
 </style>
