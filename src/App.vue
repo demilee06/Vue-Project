@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app" bg>
     <!-- Background Layer -->
     <div class="background"></div>
 
@@ -67,4 +67,6 @@ export default {
   position: relative;
   z-index: 1;
 }
+
+
 </style>

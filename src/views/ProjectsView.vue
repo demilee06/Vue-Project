@@ -1,19 +1,20 @@
 <template>
   <div class="project card-group card-group-scroll prod">
     <div class="row justify-content-evenly">
-      <CardComp class="col-m-3" v-for="project in getProjects" :key="project">
+      <CardComp class="col-m-3" card v-for="project in getProjects" :key="project">
         <template #cardHeader>
-          <h3 class="card-title">{{ project.name }}</h3>
+          <h3 class="card-title" prodName>{{ project.name }}</h3>
         </template>
         <template #cardBody>
           <img :src="project.image" class="card-img-top" :alt="project.name" />
           <div class="card-body">
-            <p>{{ project.description }}</p>
+            <p prodDesc>{{ project.description }}</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted"><a :href="project.github" target="_blank">GitHub Repository</a></small>
+            <button type="button" class="btn btn-secondary"><a :href="project.github" target="_blank" git>GitHub</a></button>
+            <!-- <small class="text-muted"><a :href="project.github" target="_blank">GitHub Repository</a></small> -->
             <br>
-            <small class="text-muted"><a :href="project.vercel" target="_blank">Vercel Host</a></small>
+            <button type="button" class="btn btn-secondary"><a :href="project.vercel" target="_blank" git>GoLive</a></button>
           </div>
           </template>
         </CardComp>
@@ -65,4 +66,29 @@ img{
  justify-content: space-between;
 
 }
+
+[prodName]{
+  color: white ;
+  text-align: center;
+}
+
+[prodDesc]{
+  color: white ;
+  text-align: center;
+}
+
+[card]{
+  min-height: 32.5em ;
+  margin-bottom: 3rem;
+}
+
+[git]{
+  color: white;
+  text-decoration: none;
+}
+
+.card-body{
+  min-height: 210px;
+}
+
 </style>

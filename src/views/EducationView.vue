@@ -1,6 +1,6 @@
 <template>
 
-  <div class="education container">
+  <div class="education container" this>
 
     
     <div class="row1"> <br><br><br>
@@ -9,7 +9,7 @@
     <div class="row gap-3">
       <transition-group name="fade-left" tag="div">
 
-        <card-comp v-for="education in getEdu" :key="education" style="width: 100%;">
+        <card-comp v-for="education in getEdu" :key="education" style="width: 100%;" edu>
           <template #cardHeader>
             <h3 class="card-title">{{ education.placeOfInstitution }}</h3>
           </template>
@@ -114,6 +114,7 @@ h2{
 }
 .info{
   color:white;
+  text-align: center;
 }
 #card-sub{
   color: white;
@@ -177,5 +178,9 @@ h2{
     transform: translateX(0);
   }
 }
+[edu]{
+  min-height: 250;
+}
+
 
 </style>
