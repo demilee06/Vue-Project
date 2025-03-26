@@ -11,7 +11,7 @@
     <div class="row4 gap-3">
       <transition-group name="fade-left" tag="div">
 
-        <card-comp v-for="education in getEdu" :key="education" style="width: 100%;" edu>
+        <card-comp v-for="education in getEdu" :key="education" style="width: 100%; height: 350px; margin-bottom: 23px;" edu>
 
         <!-- <card-comp v-for="education in getEdu" :key="education"  :class="{ 'small-card': index === 0 }" ></card-comp>
         style="width: 100%;"> -->
@@ -41,7 +41,7 @@
             <h3 class="card-title">{{ workExp.placeOfWork }}</h3>
           </template>
           <template #cardBody>
-            <h6 class="card-subtitle mb-2 text-body-secondary" id="work">{{ workExp.year }}</h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary" id="work" year>{{ workExp.year }}</h6>
             <p class="info">{{ workExp.description }}</p>
             <p class="info">{{ workExp.contact[0].name }}</p>
             <p class="info">{{ workExp.contact[0].cell }}</p>
@@ -84,12 +84,12 @@ export default {
 </script>
 <style scoped>
 .education .container{
-  background-color: #fff;
+  background-color: transparent;
   padding:50px;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 380px;
+  width: 100%;
   height: 100%;
   color: black;
 }
@@ -191,8 +191,11 @@ h2{
   }
 }
 
+h6.card-subtitle .mb-2 .text-body-secondary{
+  color: #fff;
+}
 [edu]{
-  min-height: 250;
+  min-height: 250px;
 }
 
 </style>
