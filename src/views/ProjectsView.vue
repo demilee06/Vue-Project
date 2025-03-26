@@ -1,7 +1,7 @@
 <template>
   <div class="project card-group card-group-scroll prod">
-    <div class="row justify-content-evenly">
-      <CardComp class="col-m-3" card v-for="project in getProjects" :key="project">
+    <div class="row ">
+      <CardComp class="col-m-1" card v-for="project in getProjects" :key="project">
         <template #cardHeader>
           <h3 class="card-title" prodName>{{ project.name }}</h3>
         </template>
@@ -80,6 +80,7 @@ img{
 [card]{
   min-height: 32.5em ;
   margin-bottom: 3rem;
+  scale: 0.8;  /* scale is used to scale down the selected element by the specified value*/
 }
 
 [git]{
@@ -88,7 +89,14 @@ img{
 }
 
 .card-body{
-  min-height: 210px;
+  min-height: 180px;
+}
+.project{
+}
+
+.row{
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 </style>

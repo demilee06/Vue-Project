@@ -156,4 +156,8 @@ export default {
   cursor: pointer;
 }
 
+.card{
+  min-height: 200px !important;
+}
+
 </style>

@@ -191,8 +191,9 @@ h2{
   }
 }
 
-h6.card-subtitle .mb-2 .text-body-secondary{
-  color: #fff;
+.card-subtitle{
+  color: #fff !important;
+  text-align: center;
 }
 [edu]{
   min-height: 250px;
