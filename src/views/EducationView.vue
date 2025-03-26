@@ -126,6 +126,7 @@ export default {
   display: flex;
   justify-content: center;
   color: #fff;
+  text-align: center;
 }
 h2{
   text-align: center;

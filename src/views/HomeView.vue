@@ -30,7 +30,7 @@
         <br><br>
         <!-- From Uiverse.io by Codecite -->
         <div class="button">
-          <a href="#" class="anchor">
+          <a href="https://slack-files.com/files-pri-safe/T02LW4RMXJQ-F08K3612JUS/my_resume__1_.pdf?c=1742979670-da42c7e2c12cca1d" target="_blank" class="anchor">
             <span>Download CV</span>
           </a>
         </div>
