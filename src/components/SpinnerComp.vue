@@ -20,7 +20,7 @@ export default {
 <style scoped>
 
 .dot-spinner {
-  --uib-size: 2.8rem;
+  --uib-size: 10.8rem;
   --uib-speed: .9s;
   --uib-color: #183153;
   position: relative;
@@ -124,7 +124,8 @@ export default {
 }
 
 .Spinner{
-    width: 100VW;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
